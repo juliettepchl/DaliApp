@@ -1,17 +1,29 @@
-<?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.juliettepouchol.daliapplication.MainActivity">
+    tools:context="MainActivity">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="386dp"
-        android:layout_height="189dp"
-        app:srcCompat="@drawable/dali"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp" />
+    <cs65.confuse.SlidingTabStrip
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:baselineAligned="true"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:visibility="visible" >
 
-</android.support.v7.widget.LinearLayoutCompat>
+    </cs65.confuse.SlidingTabStrip>
+
+    <cs65.confuse.SlidingTabLayout
+        android:id="@+id/tab"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/tab"/>
+</RelativeLayout>
